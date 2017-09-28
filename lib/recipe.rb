@@ -5,4 +5,6 @@ class Recipe < ActiveRecord::Base
 
   has_many :tags
   has_many :categories, through: :tags
+
+  validates(:name, :presence => true)
 end

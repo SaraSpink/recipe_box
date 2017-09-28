@@ -1,0 +1,14 @@
+<h1>Your Recipe:</h1>
+
+<h2><%= @recipe_by_id.name %></h2>
+
+<form action="/" method="post">
+  <label for="ingredients">Ingredients:</label>
+  <input id="ingredients" name="ingredients" type="text">
+  <br>
+  <label for="instructions">Instructions:</label>
+  <input id="instructions" name="instructions" type="text">
+
+  <button type="submit">Submit</button>
+
+</form>
