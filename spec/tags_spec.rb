@@ -1,6 +1,7 @@
 require("spec_helper")
 
-describe(Procedure) do
+
+describe(Tag) do
   it { should belong_to(:recipe)}
-  it { should belong_to(:ingredient)}
+  it { should belong_to(:category)}
 end
