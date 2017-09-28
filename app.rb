@@ -35,7 +35,6 @@ end
 
 get ("/recipe/:id") do
   @recipe_by_id = Recipe.find(params.fetch(:id).to_i())
-
   erb(:recipe_detail)
 end
 
@@ -43,6 +42,11 @@ post ("/recipe/:id") do
   @recipe_by_id = Recipe.find(params.fetch(:id).to_i())
   ingredient = Ingredient.create({:name => params["ingredient"]})
   @recipe_by_id.ingredients.push(ingredient)
-
   erb(:recipe_detail)
+end
+
+delete("/recipe/:id") do
+  @recipe = Recipe.find(params.fetch(:id).to_i())
+  @recipe.destroy
+  redirect("/")
 end

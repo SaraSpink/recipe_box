@@ -26,4 +26,9 @@
   <% end %>
 </ul>
 
+<form action="/recipe/<%= @recipe_by_id.id %>" method="post">
+  <input name="_method" type="hidden" value="delete">
+  <button type="submit">Delete</button>
+</form>
+
 <a href="/"><button type="button">Return Home</button></a>
